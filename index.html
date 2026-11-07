@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="orman">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#05080a">
+	<meta name="description" content="Satırları doldur, blokları patlat, lige yüksel. Puzzle Block Android’de." data-i18n-meta="meta">
+	<title>Puzzle Block</title>
+	<link rel="icon" href="assets/logo.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		try {
+			var theme = localStorage.getItem("pb_theme");
+			if (theme === "orman" || theme === "col" || theme === "kutup" || theme === "uzay") {
+				document.documentElement.dataset.theme = theme;
+			}
+			var lang = localStorage.getItem("pb_lang");
+			if (lang === "en" || lang === "tr") document.documentElement.lang = lang;
+		} catch (e) {}
+	</script>
+</head>
+<body>
+	<a class="skip" href="#icerik" data-i18n="skip">İçeriğe geç</a>
+	<header class="site-header">
+		<a class="brand" href="#ust">
+			<img src="assets/logo.png" alt="" width="512" height="512">
+			<span>Puzzle Block</span>
+		</a>
+		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+		<nav id="site-nav">
+			<a href="#nasil" data-i18n="nav_how">Nasıl oynanır</a>
+			<a href="#modlar" data-i18n="nav_modes">Modlar</a>
+			<a href="#ozellikler" data-i18n="nav_features">Özellikler</a>
+			<a href="#temalar" data-i18n="nav_themes">Temalar</a>
+			<div class="lang" role="group" data-i18n-aria="lang_group" aria-label="Dil">
+				<button type="button" data-lang="tr" aria-pressed="true">TR</button>
+				<button type="button" data-lang="en" aria-pressed="false">EN</button>
+			</div>
+			<a class="play play-small" href="https://play.google.com/store/apps/details?id=com.balaklavalideveloper.puzzleblock" target="_blank" rel="noopener">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 2.8v18.4c0 .7.7 1.1 1.3.8l14.2-8.2c.6-.3.6-1.2 0-1.5L4.8 2c-.6-.3-1.3.1-1.3.8z"/></svg>
+				<span data-i18n="nav_play">Google Play</span>
+			</a>
+		</nav>
+	</header>
+
+	<main id="icerik">
+		<section class="hero" id="ust">
+			<div class="hero-copy">
+				<p class="kicker" data-i18n="hero_kicker">Android bulmaca</p>
+				<h1>Puzzle Block</h1>
+				<p class="lede" data-i18n="hero_tagline">Satırları doldur, blokları patlat, lige yüksel.</p>
+				<a class="play" href="https://play.google.com/store/apps/details?id=com.balaklavalideveloper.puzzleblock" target="_blank" rel="noopener">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 2.8v18.4c0 .7.7 1.1 1.3.8l14.2-8.2c.6-.3.6-1.2 0-1.5L4.8 2c-.6-.3-1.3.1-1.3.8z"/></svg>
+					<span>
+						<small data-i18n="play_small">İndir</small>
+						<strong data-i18n="play_strong">Google Play</strong>
+					</span>
+				</a>
+			</div>
+			<div class="phone" aria-hidden="true">
+				<div class="phone-notch"></div>
+				<div class="screen">
+					<div class="hud"><span>SKOR</span><b>12 480</b></div>
+					<div class="board">
+						<i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell"></i><i class="cell"></i><i class="cell c1"></i><i class="cell c1"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell"></i><i class="cell c4"></i><i class="cell c4"></i><i class="cell c4"></i><i class="cell c2"></i><i class="cell c2"></i><i class="cell"></i><i class="cell"></i>
+						<i class="cell c5"></i><i class="cell c5"></i><i class="cell c4"></i><i class="cell c4"></i><i class="cell c2"></i><i class="cell c2"></i><i class="cell c3"></i><i class="cell c3"></i>
+						<i class="cell c5"></i><i class="cell c5"></i><i class="cell c0"></i><i class="cell c0"></i><i class="cell c0"></i><i class="cell c6"></i><i class="cell c3"></i><i class="cell c3"></i>
+						<i class="cell c0"></i><i class="cell c0"></i><i class="cell c0"></i><i class="cell c6"></i><i class="cell c6"></i><i class="cell c6"></i><i class="cell c3"></i><i class="cell c1"></i>
+						<i class="cell c1"></i><i class="cell c1"></i><i class="cell c5"></i><i class="cell c5"></i><i class="cell c6"></i><i class="cell c6"></i><i class="cell c2"></i><i class="cell c2"></i>
+					</div>
+					<div class="piece piece-a">
+						<i class="cell c2"></i><i class="cell c2"></i><i class="cell c2"></i><i class="cell c2"></i>
+					</div>
+					<div class="piece piece-b">
+						<i class="cell c4"></i><i class="cell c4"></i><i class="cell c4"></i><i class="cell c4"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="nasil" class="panel">
+			<div class="section-head">
+				<h2 data-i18n="how_title">Nasıl oynanır</h2>
+				<p data-i18n="how_lead">Parçalar yukarıdan düşer. Bir satır dolunca o satır patlar.</p>
+			</div>
+			<ol class="steps">
+				<li>
+					<span>01</span>
+					<h3 data-i18n="step1_t">Kaydır</h3>
+					<p data-i18n="step1_d">Parçayı sola veya sağa al.</p>
+				</li>
+				<li>
+					<span>02</span>
+					<h3 data-i18n="step2_t">Döndür</h3>
+					<p data-i18n="step2_d">Parçayı oturacağı yöne çevir.</p>
+				</li>
+				<li>
+					<span>03</span>
+					<h3 data-i18n="step3_t">Hızlandır</h3>
+					<p data-i18n="step3_d">Aşağı ile parçayı daha hızlı düşür.</p>
+				</li>
+				<li>
+					<span>04</span>
+					<h3 data-i18n="step4_t">Patlat</h3>
+					<p data-i18n="step4_d">Dolu satır yok olur. Patlayan her blok 1 jeton kazandırır.</p>
+				</li>
+			</ol>
+		</section>
+
+		<section id="modlar" class="panel">
+			<div class="section-head">
+				<h2 data-i18n="modes_title">İki oyun</h2>
+				<p data-i18n="modes_lead">İstediğin zaman sınırsız oyna ya da botla yarış.</p>
+			</div>
+			<div class="mode-grid">
+				<article class="card">
+					<p class="kicker" data-i18n="mode_classic_k">Mod</p>
+					<h3 data-i18n="mode_classic_t">Klasik</h3>
+					<p data-i18n="mode_classic_d">Sınırsız tur. Yüksek skoru kovala. Tahta dolunca oyun biter.</p>
+				</article>
+				<article class="card">
+					<p class="kicker" data-i18n="mode_race_k">50 seviye</p>
+					<h3 data-i18n="mode_race_t">Yarış</h3>
+					<p data-i18n="mode_race_d">Bot hedef puana varmadan sen ulaş. Tahta dolarsa seviye kaybedilir. Kazanınca lig puanı gelir.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="ozellikler" class="panel">
+			<div class="section-head">
+				<h2 data-i18n="feat_title">Her gün bir sebep</h2>
+				<p data-i18n="feat_lead">Görevler, ödüller ve haftalık lig aynı jetonla döner.</p>
+			</div>
+			<div class="feat-grid">
+				<article class="card">
+					<h3 data-i18n="feat_quests_t">Görevler</h3>
+					<p data-i18n="feat_quests_d">Günlük ve haftalık işler: skor, jeton, yarış seviyesi ve oynama süresi.</p>
+				</article>
+				<article class="card">
+					<h3 data-i18n="feat_daily_t">Günlük ödül</h3>
+					<p data-i18n="feat_daily_d">Her gün açılan jeton ödülü. Seriyi kaçırma.</p>
+				</article>
+				<article class="card">
+					<h3 data-i18n="feat_xp_t">XP yolu</h3>
+					<p data-i18n="feat_xp_d">Oynadıkça biriken deneyim. Kilitli ödüller sırayla açılır.</p>
+				</article>
+				<article class="card">
+					<h3 data-i18n="feat_league_t">Haftalık lig</h3>
+					<p data-i18n="feat_league_d">Sıralama Pazartesi 00:00’da sıfırlanır. Üst sıralar jeton kazandırır.</p>
+					<ol class="league">
+						<li data-i18n="lg1">Çaylak</li>
+						<li data-i18n="lg2">Orta</li>
+						<li data-i18n="lg3">Orta Üstü</li>
+						<li data-i18n="lg4">Usta</li>
+						<li data-i18n="lg5">Profesyonel</li>
+					</ol>
+				</article>
+			</div>
+
+			<div class="section-head shop-head">
+				<h2 data-i18n="shop_title">Mağaza güçlendirmeleri</h2>
+				<p data-i18n="shop_lead">Jetonla alınan eşyalar o turda işe yarar.</p>
+			</div>
+			<ul class="shop">
+				<li class="card">
+					<img src="assets/dinamit.png" alt="" width="384" height="384">
+					<h3 data-i18n="item_bomb_t">Dinamit</h3>
+					<p data-i18n="item_bomb_d">Tahtada rastgele 4 bloğu patlatır.</p>
+				</li>
+				<li class="card">
+					<img src="assets/2x.png" alt="" width="384" height="256">
+					<h3 data-i18n="item_2x_t">2X</h3>
+					<p data-i18n="item_2x_d">2 dakika boyunca puanı ikiye katlar.</p>
+				</li>
+				<li class="card">
+					<img src="assets/renkli_blok.png" alt="" width="100" height="100">
+					<h3 data-i18n="item_rainbow_t">Renkli blok</h3>
+					<p data-i18n="item_rainbow_d">Patlayınca tahtadaki tüm blokları temizler.</p>
+				</li>
+				<li class="card">
+					<img src="assets/buz.png" alt="" width="384" height="351">
+					<h3 data-i18n="item_ice_t">Buz</h3>
+					<p data-i18n="item_ice_d">45 saniye boyunca düşüşü yavaşlatır.</p>
+				</li>
+				<li class="card">
+					<img src="assets/cekic.png" alt="" width="384" height="351">
+					<h3 data-i18n="item_hammer_t">Çekiç</h3>
+					<p data-i18n="item_hammer_d">Seçtiğin yerde 2x2 alanı patlatır.</p>
+				</li>
+				<li class="card">
+					<img src="assets/tutucu.png" alt="" width="384" height="351">
+					<h3 data-i18n="item_hold_t">Tutucu</h3>
+					<p data-i18n="item_hold_d">Düşen parçayı sıraya alır, yerine yenisi gelir.</p>
+				</li>
+				<li class="card">
+					<img src="assets/lazer.png" alt="" width="384" height="351">
+					<h3 data-i18n="item_laser_t">Lazer</h3>
+					<p data-i18n="item_laser_d">En alttaki dolu satırı temizler.</p>
+				</li>
+				<li class="card">
+					<img src="assets/geri_al.png" alt="" width="384" height="351">
+					<h3 data-i18n="item_undo_t">Geri Al</h3>
+					<p data-i18n="item_undo_d">Son yerleşen parçayı yeniden düşürür.</p>
+				</li>
+			</ul>
+		</section>
+
+		<section id="temalar" class="panel">
+			<div class="section-head">
+				<h2 data-i18n="themes_title">Dört tema</h2>
+				<p data-i18n="themes_lead">Orman, çöl, kutup veya uzay. Seçimin bu sayfanın rengini de değiştirir.</p>
+			</div>
+			<div class="theme-grid" role="group" data-i18n-aria="theme_group" aria-label="Temalar">
+				<button type="button" class="theme-card" data-theme-pick="orman" aria-pressed="true">
+					<span class="swatch"></span>
+					<span data-i18n="theme_forest">Orman</span>
+				</button>
+				<button type="button" class="theme-card" data-theme-pick="col" aria-pressed="false">
+					<span class="swatch"></span>
+					<span data-i18n="theme_desert">Çöl</span>
+				</button>
+				<button type="button" class="theme-card" data-theme-pick="kutup" aria-pressed="false">
+					<span class="swatch"></span>
+					<span data-i18n="theme_polar">Kutup</span>
+				</button>
+				<button type="button" class="theme-card" data-theme-pick="uzay" aria-pressed="false">
+					<span class="swatch"></span>
+					<span data-i18n="theme_space">Uzay</span>
+				</button>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p><span data-i18n="footer_by">Geliştiren</span> <strong>BALAKLAVALI DEVELOPER</strong></p>
+		<p>
+			<a href="mailto:gradlecode@outlook.com">gradlecode@outlook.com</a>
+			<span aria-hidden="true">·</span>
+			<a href="https://sites.google.com/view/gradlegames/privacy" target="_blank" rel="noopener" data-i18n="footer_privacy">Gizlilik Politikası</a>
+		</p>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>
